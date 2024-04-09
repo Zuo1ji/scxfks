@@ -45,9 +45,10 @@ class mySession(requests.Session):
         tree = etree.HTML(res.content)
         try:
             username=tree.xpath("/html/body/section/div[1]/div/div[1]/div[1]/h3/text()")[0]#有百分之一的几率找不到
+            score=tree.xpath("/html/body/section/div[1]/div/div[1]/div[3]/div[1]/text()")[0].split('：')[-1]
         except:
             username="天选之子"
-        score=tree.xpath("/html/body/section/div[1]/div/div[1]/div[3]/div[1]/text()")[0].split('：')[-1]
+            score="0"
         return username,score
     def getcookie(self):
         cookies=self.cookies
