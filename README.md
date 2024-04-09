@@ -9,7 +9,7 @@
 # 安装
 如果是单纯的使用不需要cuda也行，如果自行训练最好还是安装cuda
 ``` 
-git clone https://github.com/Zuo1ji/scxfks
+git clone https://github.com/Zuo1ji/scxfks.git
 #不使用cuda
 pip install pillow lxml requests torch torchvision tensorboard
 
